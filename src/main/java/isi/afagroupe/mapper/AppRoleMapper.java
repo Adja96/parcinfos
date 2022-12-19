@@ -1,11 +1,11 @@
 package isi.afagroupe.mapper;
 
+import isi.afagroupe.dto.AppRole;
 import isi.afagroupe.entities.AppRoleEntity;
 import org.mapstruct.Mapper;
 
 @Mapper
-public interface AppRole {
-    AppRole toAppRole(AppRoleEntity appRole);
-
+public interface AppRoleMapper {
+    AppRole toAppRole(AppRoleEntity appRoleEntity);
     AppRoleEntity fromAppRole(AppRole appRole);
 }
