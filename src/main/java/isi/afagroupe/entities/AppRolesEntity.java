@@ -10,14 +10,14 @@ import java.util.List;
 @Entity
 @Table(name = "roles")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class AppRoleEntity {
+@AllArgsConstructor
+public class AppRolesEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     @Column(length = 150, nullable = false, unique = true)
     private String nom;
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(mappedBy = "appRolesEntities")
     private List<AppUserEntity> appUserEntities;
 }

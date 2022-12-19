@@ -12,13 +12,14 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AppUser {
-    private int id;
-    @NotNull(message ="le nom ne doit pas etre null")
+    private Integer id;
+    @NotNull(message = "Le nom ne doit pas etre nul!")
     private String nom;
-    @NotNull(message ="le prenom ne doit pas etre null")
+    @NotNull(message = "Le prenom ne doit pas etre nul!")
     private String prenom;
-    @NotNull(message ="l'email ne doit pas etre null")
+    private String adresse;
+    @NotNull(message = "L'email ne doit pas etre nul!")
     private String email;
-    @NotNull(message ="le password ne doit pas etre null")
     private String password;
+    private int etat;
 }

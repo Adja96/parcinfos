@@ -12,19 +12,20 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class AppUserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @Column( nullable = false ,length = 150)
+    private Integer id;
+    @Column(length = 50, nullable = false)
     private String nom;
-    @Column( nullable = false ,length = 200)
+    @Column(length = 80, nullable = false)
     private String prenom;
-    @Column( nullable = false ,length = 200)
+    @Column(length = 200)
+    private String adresse;
+    @Column(length = 150, nullable = false)
     private String email;
-    @Column( nullable = false ,length = 200)
     private String password;
+    private int etat;
     @ManyToMany
-    private List<AppRoleEntity> appRole;
+    private List<AppRolesEntity> appRolesEntities;
 }

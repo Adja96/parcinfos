@@ -4,6 +4,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import isi.afagroupe.entities.AppUserEntity;
 
+import java.util.List;
+
 public interface AppUserRepository extends JpaRepository<AppUserEntity,Integer> {
-    AppUserRepository findByEmail(String email);
+    AppUserEntity findByEmail(String email);
+    List<AppUserEntity> findByNom(String nom);
+    List<AppUserEntity> findByPrenom(String prenom);
 }
